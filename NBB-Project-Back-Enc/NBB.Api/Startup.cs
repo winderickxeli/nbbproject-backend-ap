@@ -36,7 +36,7 @@ namespace NBB.Api
             services.AddControllers();
             services.AddSwaggerGen();
             var connection = _configuration.GetConnectionString("NBBDatabase");
-            services.AddDbContext<NBBDBContext>(x => x.UseMySql(connection, ServerVersion.AutoDetect(connection)));
+            services.AddDbContext<NBBDBContext>(x => x.UseSqlServer(connection));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

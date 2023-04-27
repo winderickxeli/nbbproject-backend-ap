@@ -7,11 +7,11 @@ namespace NBB.Api.Entities
     public class NBBDBContext: DbContext
     {
         public NBBDBContext(DbContextOptions<NBBDBContext> options) : base(options) { }
-        public DbSet<Enterprise> Enterprises { get; set; }
-        public DbSet<FinancialData> FinancialData { get; set;}
-        public DbSet<Address> Address { get; set; }
+        public DbSet<Enterprise>? Enterprises { get; set; }
+        public DbSet<FinancialData>? FinancialData { get; set;}
+        public DbSet<Address>? Address { get; set; }
 
-        public DbSet<UserLogin> UserLogin { get; set; }
+        public DbSet<UserLogin>? UserLogin { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
