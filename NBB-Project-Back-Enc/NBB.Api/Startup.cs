@@ -35,7 +35,7 @@ namespace NBB.Api
             services.AddScoped<IEnterpriseRepository, EfNBBRepository>();
             services.AddControllers();
             services.AddSwaggerGen();
-            var connection = _configuration.GetConnectionString("NBBDatabase");
+            var connection = _configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
             services.AddDbContext<NBBDBContext>(x => x.UseSqlServer(connection));
         }
 
